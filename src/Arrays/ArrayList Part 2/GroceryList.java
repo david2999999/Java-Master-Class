@@ -1,10 +1,6 @@
-package com.timbuchalka;
 
 import java.util.ArrayList;
 
-/**
- * Created by dev on 23/08/15.
- */
 public class GroceryList {
     private ArrayList<String> groceryList = new ArrayList<String>();
 
