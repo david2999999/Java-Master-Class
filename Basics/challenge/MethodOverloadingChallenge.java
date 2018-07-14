@@ -1,4 +1,4 @@
-package Basics;
+package Basics.challenge;
 
 public class MethodOverloadingChallenge {
     public static void main(String[] args) {
