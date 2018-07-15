@@ -1,4 +1,4 @@
-package ControlFlow;
+package Basics;
 
 public class ParseString {
     public static void main(String[] args) {
