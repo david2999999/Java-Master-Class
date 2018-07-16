@@ -2,12 +2,11 @@ package OOP.Account;
 
 public class AccountMain {
     public static void main(String[] args) {
-        Account myAccount = new Account();
-        myAccount.setNumber("12314");
-        myAccount.setBalance(0.00);
-        myAccount.setCustomerName("Louis");
-        myAccount.setCustomerEmailAddress("lou@gmail.com");
-        myAccount.setCustomerPhoneNumber("1-231-123-1231");
+        Account myAccount = new Account("12314", 0.00,
+                "Louis", "lou@gmail.com", "1-231-123-1231" );
+
+        System.out.println(myAccount.getNumber());
+        System.out.println(myAccount.getBalance());
 
         myAccount.withdrawal(100);
 
