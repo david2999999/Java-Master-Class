@@ -1,6 +1,6 @@
-package OOP.Class;
+package OOP.Car;
 
-public class Main {
+public class CarMain {
     public static void main(String[] args) {
         Car porche = new Car();
         Car holden = new Car();

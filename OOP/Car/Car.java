@@ -1,4 +1,4 @@
-package OOP.Class;
+package OOP.Car;
 
 public class Car {
     private int doors;
