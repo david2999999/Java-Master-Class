@@ -9,7 +9,7 @@ public class Array {
         }
 
         printArray(myIntArray);
-        
+
         double[] myDoubleArray = new double[10];
     }
 
