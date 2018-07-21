@@ -5,7 +5,7 @@ import Arrays.Basic.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Sorting {
 
     private static Scanner scanner = new Scanner(System.in);
 
