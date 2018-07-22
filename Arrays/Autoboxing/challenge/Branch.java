@@ -42,6 +42,10 @@ public class Branch {
         return null;
     }
 
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
     public String getName() {
         return name;
     }
