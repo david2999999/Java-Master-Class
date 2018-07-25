@@ -5,17 +5,22 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Player dav = new Player("Dav", 10, 20);
-        System.out.println(dav);
+//        Player dav = new Player("Dav", 10, 20);
+//        System.out.println(dav);
+//
+//        saveObject(dav);
+//
+//        dav.setHitPoints(9);
+//        System.out.println(dav);
+//        dav.setWeapon("Stormbringer");
+//        saveObject(dav);
+//        loadObject(dav);
+//        System.out.println(dav);
 
-        saveObject(dav);
-
-        dav.setHitPoints(9);
-        System.out.println(dav);
-        dav.setWeapon("Stormbringer");
-        saveObject(dav);
-        loadObject(dav);
-        System.out.println(dav);
+        ISaveable wereWolf = new Monster("Wolf", 12, 30);
+        System.out.println("Strength = " + ((Monster) wereWolf).getStrength());
+        System.out.println(wereWolf);
+        saveObject(wereWolf);
     }
 
     public static ArrayList<String> readValues() {
