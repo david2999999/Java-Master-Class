@@ -8,5 +8,10 @@ public class Main {
         myPhone.powerOn();
         myPhone.callPhone(123123);
         myPhone.answer();
+
+        myPhone = new MobilePhone(01234);
+        myPhone.powerOn();
+        myPhone.callPhone(01234);
+        myPhone.answer();
     }
 }
