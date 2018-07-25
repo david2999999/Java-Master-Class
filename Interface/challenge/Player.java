@@ -23,6 +23,8 @@ public class Player implements ISaveable {
         values.add(1, "" + this.hitPoints);
         values.add(2, "" + this.strength);
         values.add(3, this.weapon);
+
+        return values;
     }
 
     @Override
@@ -49,6 +51,22 @@ public class Player implements ISaveable {
 
     public String getWeapon() {
         return weapon;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setWeapon(String weapon) {
+        this.weapon = weapon;
     }
 
     @Override

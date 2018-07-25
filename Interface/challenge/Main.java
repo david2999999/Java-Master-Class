@@ -5,7 +5,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Player dav = new Player("Dav", 10, 20);
+        System.out.println(dav);
 
+        saveObject(dav);
+
+        dav.setHitPoints(9);
+        System.out.println(dav);
+        dav.setWeapon("Stormbringer");
+        saveObject(dav);
+        loadObject(dav);
+        System.out.println(dav);
     }
 
     public static ArrayList<String> readValues() {
@@ -35,5 +45,16 @@ public class Main {
             }
         }
         return values;
+    }
+
+    public static void saveObject(ISaveable objectToSave) {
+        for (int i = 0; i < objectToSave.write().size(); i++) {
+            System.out.println("Saving " + objectToSave.write().get(i) + " to storage device");
+        }
+    }
+
+    public static void loadObject(ISaveable objectToLoad) {
+        ArrayList<String> values = readValues();
+        objectToLoad.read(values);
     }
 }
