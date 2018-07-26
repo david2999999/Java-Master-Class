@@ -1,4 +1,4 @@
-package InnerClass;
+package InnerInterface;
 
 public class Button {
     private String title;
