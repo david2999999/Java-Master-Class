@@ -6,11 +6,14 @@ public class GenericMain {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
-        Team adelaideCrows = new Team("Adelaide Crows");
-        adelaideCrows.addPlayer(joe);
-        adelaideCrows.addPlayer(pat);
-        adelaideCrows.addPlayer(beckham);
+        Team<FootballPlayer> footballPlayerTeam = new Team<>("Adelaide Crows");
+        footballPlayerTeam.addPlayer(joe);
 
-        System.out.println(adelaideCrows.numPlayers());
+        System.out.println(footballPlayerTeam.numPlayers());
+
+        Team<BaseballPlayer> baseballPlayerTeam = new Team<>("Chicago Clubs");
+        baseballPlayerTeam.addPlayer(pat);
+
+        System.out.println(baseballPlayerTeam.numPlayers());
     }
 }
