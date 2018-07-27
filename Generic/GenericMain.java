@@ -15,5 +15,8 @@ public class GenericMain {
         baseballPlayerTeam.addPlayer(pat);
 
         System.out.println(baseballPlayerTeam.numPlayers());
+
+        Team<SoccerPlayer> soccerPlayerTeam = new Team<>("Soccer Team");
+        soccerPlayerTeam.addPlayer(beckham);
     }
 }

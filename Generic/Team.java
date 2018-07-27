@@ -2,7 +2,9 @@ package Generic;
 
 import java.util.ArrayList;
 
-public class Team<T> {
+
+//<T extends Player & Coach & Manager>
+public class Team<T extends Player> {
     private String name;
     int played = 0;
     int won = 0;
@@ -21,11 +23,11 @@ public class Team<T> {
 
     public boolean addPlayer(T player) {
         if (members.contains(player)) {
-            System.out.println(((Player)player).getName() + " is already on this team");
+            System.out.println(player.getName() + " is already on this team");
             return false;
         } else {
             this.members.add(player);
-            System.out.println(((Player)player).getName() + " picked for team " + this.name);
+            System.out.println(player.getName() + " picked for team " + this.name);
             return true;
         }
     }
@@ -34,7 +36,7 @@ public class Team<T> {
         return this.members.size();
     }
 
-    public void matchResult(Team opponent, int ourScore, int theirScore) {
+    public void matchResult(Team<T> opponent, int ourScore, int theirScore) {
         if (ourScore > theirScore) {
             won++;
         } else if (ourScore == theirScore) {
