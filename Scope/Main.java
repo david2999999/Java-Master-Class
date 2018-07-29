@@ -8,6 +8,10 @@ public class Main {
         System.out.println("scopeCheck varOne is " + scopeCheck.getVarOne());
         System.out.println(varFour);
 
+        System.out.println("=========================");
+        scopeCheck.useInner();
+        System.out.println("=========================");
+
         scopeCheck.timesTwo();
 
         System.out.println("================");
