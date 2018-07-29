@@ -9,5 +9,9 @@ public class Main {
         System.out.println(privateVar);
 
         scopeCheck.timesTwo();
+
+        System.out.println("================");
+        ScopeCheck.InnerClass innerClass = scopeCheck.new InnerClass();
+        innerClass.timesTwo();
     }
 }
