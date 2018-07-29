@@ -10,5 +10,7 @@ public class Main {
 
         StaticTest thirdInstance = new StaticTest("3rd Instance");
         System.out.println(thirdInstance.getName() + " is instance number " + StaticTest.getNumInstances());
+
+
     }
 }
