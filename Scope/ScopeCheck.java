@@ -2,35 +2,35 @@ package Scope;
 
 public class ScopeCheck {
     public int publicVar = 0;
-    private int privateVar = 1;
+    private int varOne = 1;
 
     public ScopeCheck() {
-        System.out.println("ScopeCheck Created, publicVar = " + publicVar + ": privateVar = " + privateVar);
+        System.out.println("ScopeCheck Created, publicVar = " + publicVar + ": varThree = " + varOne);
     }
 
-    public int getPrivateVar() {
-        return privateVar;
+    public int getVarOne() {
+        return varOne;
     }
 
     public void timesTwo() {
-        int privateVar = 2;
+        int varTwo = 2;
         for (int i = 0; i < 10; i++) {
-            System.out.println(i + " times two is " + i * privateVar);
+            System.out.println(i + " times two is " + i * varTwo);
         }
     }
 
     public class InnerClass {
-        public int privateVar = 3;
+        public int varThree = 3;
 
         public InnerClass() {
-            System.out.println("InnerClass created, privateVar is " + privateVar);
+            System.out.println("InnerClass created, varOne is " + varOne + " and varThree is " + varThree);
         }
 
         public void timesTwo() {
+            System.out.println("VarOne is still available here " + varOne);
             // ScopeCheck.this.timesTwo();
-            int privateVar = 2;
             for (int i = 0; i < 10; i++) {
-                System.out.println(i + " times two is " + i * privateVar);
+                System.out.println(i + " times three is " + i * varThree);
             }
         }
     }

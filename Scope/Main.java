@@ -2,11 +2,11 @@ package Scope;
 
 public class Main {
     public static void main(String[] args) {
-        String privateVar = "This is private to main()";
+        String varFour = "This is private to main()";
 
         ScopeCheck scopeCheck = new ScopeCheck();
-        System.out.println("scopeCheck privateVar is " + scopeCheck.getPrivateVar());
-        System.out.println(privateVar);
+        System.out.println("scopeCheck varOne is " + scopeCheck.getVarOne());
+        System.out.println(varFour);
 
         scopeCheck.timesTwo();
 
