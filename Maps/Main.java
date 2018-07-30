@@ -18,5 +18,10 @@ public class Main {
             languages.put("Java", "this course is about java");
         }
 
+        System.out.println("=====================");
+        for (String key: languages.keySet()) {
+            System.out.println(key + ": " + languages.get(key));
+        }
+
     }
 }
