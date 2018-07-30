@@ -31,6 +31,9 @@ public class Main2 {
         sortList(seatCopy);
         System.out.println("Printing sorted seatCopy");
         printList(seatCopy);
+
+        List<Theatre.Seat> newList = new ArrayList<>(theatre.seats.size());
+        Collections.copy(newList, theatre.seats);
     }
 
     public static void printList(List<Theatre.Seat> list) {
