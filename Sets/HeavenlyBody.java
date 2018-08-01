@@ -1,9 +1,10 @@
 package Sets;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
-public class HeavenlyBody {
+public final class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
@@ -29,4 +30,18 @@ public class HeavenlyBody {
     public Set<HeavenlyBody> getSatellites() {
         return new HashSet<>(satellites);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+
+        System.out.println("Obj.getClass() is " + obj.getClass());
+        System.out.println("this.getClass() is " + this.getClass());
+
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        String objName = ((HeavenlyBody) obj).getName();
+        return this.name.equals(objName);
+    }
+    
 }
