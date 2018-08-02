@@ -46,5 +46,25 @@ public class Main {
 
         String[] divineWords = {"to", "err", "is", "human", "to", "forgive", "divine"};
         divine.addAll(Arrays.asList(divineWords));
+
+        System.out.println();
+        System.out.print("nature - divine:");
+        Set<String> diff1 = new HashSet<>(nature);
+        diff1.removeAll(divine);
+        printSet(diff1);
+
+        System.out.println();
+        System.out.print("divine - nature");
+        Set<String> diff2 = new HashSet<>(divine);
+        diff2.removeAll(nature);
+        printSet(diff2);
+    }
+
+    private static void printSet(Set<String> set) {
+        System.out.println("\t");
+        for (String s : set) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
     }
 }
