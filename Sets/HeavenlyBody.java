@@ -43,5 +43,10 @@ public final class HeavenlyBody {
         String objName = ((HeavenlyBody) obj).getName();
         return this.name.equals(objName);
     }
-    
+
+    @Override
+    public int hashCode() {
+        System.out.println("Hashcode called");
+        return this.name.hashCode() + 57;
+    }
 }
