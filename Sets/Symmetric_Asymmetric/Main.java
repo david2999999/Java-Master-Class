@@ -1,5 +1,8 @@
 package Sets.Symmetric_Asymmetric;
 
+import Arrays.Basic.Array;
+
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -26,5 +29,22 @@ public class Main {
             System.out.println(i + " is the square of " + Math.sqrt(i) + " and the cube of " + Math.cbrt(i));
         }
 
+        Set<String> words = new HashSet<>();
+        String sentence = "one day in the year of the fox";
+        String[] arrayWords = sentence.split(" ");
+        words.addAll(Arrays.asList(arrayWords));
+
+        for (String s : words) {
+            System.out.println(s);
+        }
+
+        Set<String> nature = new HashSet<>();
+        Set<String> divine = new HashSet<>();
+
+        String[] natureWords = {"all", "nature", "is", "but", "art", "unknown", "to", "thee"};
+        nature.addAll(Arrays.asList(natureWords));
+
+        String[] divineWords = {"to", "err", "is", "human", "to", "forgive", "divine"};
+        divine.addAll(Arrays.asList(divineWords));
     }
 }
