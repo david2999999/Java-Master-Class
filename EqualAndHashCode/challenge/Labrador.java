@@ -1,4 +1,4 @@
-package Sets.challenge;
+package EqualAndHashCode.challenge;
 
 public class Labrador extends Dog {
 
