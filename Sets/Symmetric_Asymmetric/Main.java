@@ -64,11 +64,24 @@ public class Main {
         Set<String> unionTest = new HashSet<>(nature);
         unionTest.addAll(divine);
         Set<String> intersectionTest = new HashSet<>(nature);
-        intersection.retainAll(divine);
+        intersectionTest.retainAll(divine);
 
         System.out.print("Symmetric difference");
-        unionTest.removeAll(intersection);
+        unionTest.removeAll(intersectionTest);
         printSet(unionTest);
+
+        System.out.println();
+        if (nature.containsAll(divine)) {
+            System.out.println("Divine is a subset of nature");
+        }
+
+        if (nature.containsAll(intersectionTest)) {
+            System.out.println("Intersection is a subset of nature");
+        }
+
+        if (divine.containsAll(intersectionTest)) {
+            System.out.println("intersection is a subset of divine");
+        }
     }
 
     private static void printSet(Set<String> set) {
