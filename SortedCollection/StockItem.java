@@ -38,7 +38,7 @@ public class StockItem implements Comparable<StockItem> {
     public void adjustStock(int quantity) {
         int newQuantity = quantity;
         if (newQuantity >= 0) {
-            this.quantityStock = newQuantity;
+            this.quantityStock += newQuantity;
         }
     }
 
