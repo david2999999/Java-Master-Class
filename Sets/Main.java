@@ -1,5 +1,6 @@
 package Sets;
 
+import Sets.challenge.DwarfPlanet;
 import Sets.challenge.Moon;
 import Sets.challenge.Planet;
 
@@ -75,7 +76,7 @@ public class Main {
         solarSystem.put(temp.getName(), temp);
         planets.add(temp);
 
-        temp = new Planet("Pluto", 248);
+        temp = new DwarfPlanet("Pluto", 248);
         solarSystem.put(temp.getName(), temp);
         planets.add(temp);
 
@@ -105,7 +106,7 @@ public class Main {
         planets.add(pluto);
 
         for (HeavenlyBody planet: planets) {
-            System.out.println(planet.getName() + ": " + planet.getOrbitalPeriod());
+            System.out.println(planet);
         }
     }
 }
