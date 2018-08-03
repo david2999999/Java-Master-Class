@@ -1,14 +1,14 @@
 package SortedCollection;
 
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class StockList {
     private final Map<String, StockItem> list;
 
     public StockList() {
-        this.list = new HashMap<>();
+        this.list = new LinkedHashMap<>();
     }
 
     public int addStock(StockItem item) {
@@ -18,11 +18,11 @@ public class StockList {
 
             // if there are already stocks on this item, adjust the quantity
             if (inStock != item) {
-                item.adjustStock(inStock.getQuantityStock());
+                item.adjustStock(inStock.quantityInStock());
             }
 
             list.put(item.getName(), item);
-            return item.getQuantityStock();
+            return item.quantityInStock();
         }
 
         return 0;
@@ -31,7 +31,7 @@ public class StockList {
     public int sellStock(String item, int quantity) {
         StockItem inStock = list.getOrDefault(item, null);
 
-        if (inStock != null && inStock.getQuantityStock() >= quantity && quantity > 0) {
+        if (inStock != null && inStock.quantityInStock() >= quantity && quantity > 0) {
             inStock.adjustStock(-quantity);
             return quantity;
         }
