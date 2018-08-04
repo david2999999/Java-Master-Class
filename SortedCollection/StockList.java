@@ -29,16 +29,34 @@ public class StockList {
     }
 
     public int sellStock(String item, int quantity) {
-        StockItem inStock = list.getOrDefault(item, null);
+        
+//        StockItem inStock = list.getOrDefault(item, null);
+//
+//        if (inStock != null && inStock.availableQuantity() >= quantity && quantity > 0) {
+//            inStock.adjustStock(-quantity);
+//            return quantity;
+//        }
+//
+//        return 0;
+    }
 
-        if (inStock != null && inStock.availableQuantity() >= quantity && quantity > 0) {
-            inStock.adjustStock(-quantity);
-            return quantity;
+    public int reserveStock(String item, int quantity) {
+        StockItem inStock = list.get(item);
+        if (inStock != null && quantity > 0) {
+            return inStock.reserveStock(quantity);
         }
 
         return 0;
     }
 
+    public int unreserveStock(String item, int quantity){
+        StockItem inStock = list.get(item);
+        if (inStock != null && quantity > 0) {
+            return inStock.unreserveStock(quantity);
+        }
+
+        return 0;
+    }
     public StockItem get(String key) {
         return list.get(key);
     }
