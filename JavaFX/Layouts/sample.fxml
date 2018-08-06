@@ -14,9 +14,11 @@
         <!--<ColumnConstraints percentWidth="50.0"/>-->
         <!--<ColumnConstraints percentWidth="50.0"/>-->
     <!--</columnConstraints>-->
-    <Button text="Button One" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <Button text="Button One" GridPane.rowIndex="0" GridPane.columnIndex="0"
+            GridPane.halignment="RIGHT"/>
     <Button text="Button Two" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
     <Button text="Button Three" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <Button text="Really Long button four,Really Long button fourReally Long button fourReally Long button fourReally Long button fourReally Long button fourReally Long button fourReally Long button four" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Button text="Really Long button four" GridPane.rowIndex="3" GridPane.columnIndex="0"
+            GridPane.columnSpan="2"/>
     <Button text="Button Five" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
 </GridPane>
