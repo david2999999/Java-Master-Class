@@ -13,7 +13,11 @@
             </ImageView>
         </graphic>
     </Button>
-    <Label GridPane.columnIndex="1" GridPane.rowIndex="0" text="This is a label">
+    <Label GridPane.columnIndex="1" GridPane.rowIndex="0" text="This is a label"
+            textFill="blue" wrapText="true">
+        <font>
+            <Font name="Arial italic" size="12"/>
+        </font>
         <graphic>
             <ImageView>
                 <Image url="@/toolbarButtonGraphics/general/Information24.gif"/>
