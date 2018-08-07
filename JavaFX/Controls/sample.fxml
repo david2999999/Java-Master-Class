@@ -10,6 +10,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
     <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click">
@@ -34,19 +36,23 @@
     <fx:define>
         <ToggleGroup fx:id="colorToggleGroup"/>
     </fx:define>
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="2">
+        <RadioButton text="Red" toggleGroup="$colorToggleGroup"/>
+        <RadioButton text="Blue" toggleGroup="$colorToggleGroup" selected="true"/>
+        <RadioButton text="Green" toggleGroup="$colorToggleGroup"/>
+    </VBox>
 
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="2" text="Red" toggleGroup="$colorToggleGroup"/>
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="3" text="Blue" toggleGroup="$colorToggleGroup" selected="true"/>
-    <RadioButton GridPane.rowIndex="0" GridPane.columnIndex="4" text="Green" toggleGroup="$colorToggleGroup"/>
-
-    <VBox GridPane.rowIndex="0" GridPane.columnIndex="5">
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="3">
         <CheckBox text="Dog"/>
         <CheckBox text="Cat"/>
         <CheckBox text="Bird"/>
     </VBox>
-    <HBox GridPane.rowIndex="0" GridPane.columnIndex="6">
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="4">
         <ToggleButton text="Toggle Me"/>
         <ToggleButton text="Hello"/>
         <ToggleButton text="Goodbye"/>
     </HBox>
+
+    <TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <PasswordField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 </GridPane>
