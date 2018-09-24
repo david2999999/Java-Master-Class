@@ -5,6 +5,7 @@ import static Threads.MultiThreads.ThreadColor.ANSI_GREEN;
 import static Threads.MultiThreads.ThreadColor.ANSI_PURPLE;
 
 public class CountDown {
+    private int i;
     public void doCountDown() {
         String color;
 
@@ -19,7 +20,7 @@ public class CountDown {
                 color = ANSI_GREEN;
         }
 
-        for (int i = 10; i > 0; i--) {
+        for (i = 10; i > 0; i--) {
             System.out.println(color + " " + Thread.currentThread().getName() + ": i = " + i);
         }
     }
