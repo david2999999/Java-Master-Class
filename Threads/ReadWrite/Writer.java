@@ -1,4 +1,4 @@
-package Threads.ProducerConsumer;
+package Threads.ReadWrite;
 
 import java.util.Random;
 

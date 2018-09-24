@@ -1,4 +1,4 @@
-package Threads.ProducerConsumer;
+package Threads.ReadWrite;
 
 public class Message {
     private String message;
