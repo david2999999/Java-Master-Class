@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         CountDown countDown = new CountDown();
+
         CountDownThread t1 = new CountDownThread(countDown);
         t1.setName("Thread 1");
 
