@@ -11,7 +11,7 @@ public class Writer implements Runnable {
 
     @Override
     public void run() {
-        String[] messages = {
+        String messages[] = {
                 "Humpty Dumpty Sat on a wall",
                 "Had a great fall",
                 "Kings horse",
@@ -27,8 +27,7 @@ public class Writer implements Runnable {
             } catch (InterruptedException e) {
 
             }
-
-            message.write("Finished");
         }
+        message.write("Finished");
     }
 }
