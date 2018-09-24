@@ -1,6 +1,6 @@
-package Threads;
+package Threads.Demo;
 
-import static Threads.ThreadColor.ANSI_BLUE;
+import static Threads.Demo.ThreadColor.ANSI_BLUE;
 
 public class AnotherThread extends Thread {
 
